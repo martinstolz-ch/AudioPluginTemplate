@@ -10,11 +10,11 @@ set (CMAKE_CXX_STANDARD_REQUIRED ON)
 set (CMAKE_CXX_EXTENSIONS ON) # ON: use "-std=gnu++20" / OFF: use "-std=c++20"
 
 # project config ################################
-project (pocket-ep VERSION 1.0.0)
+project (AudioPlugin VERSION 1.0.0)
 set     (preRelease "alpha") # alpha, beta, final
 
 set (Target       ${PROJECT_NAME})
-set (ProductName  "pocket e-piano")
+set (ProductName  "audio plugin")
 set (pluginCode   "NP01") # noizplay plugin 01
 set (bundleId     "com.noizplay.${Target}")
 
@@ -104,7 +104,7 @@ juce_add_binary_data ("${BinaryAssets}"
     SOURCES
 
     #sounds
-    "asset/sound/galaxy.sf2"
+    # "asset/sound/..."
 )
 
 target_sources ("${Target}"
@@ -129,21 +129,6 @@ target_compile_definitions ("${Target}"
         JUCE_WEB_BROWSER=0  # If you remove this, add `NEEDS_WEB_BROWSER TRUE` to the `juce_add_plugin` call
         JUCE_USE_CURL=0     # If you remove this, add `NEEDS_CURL TRUE` to the `juce_add_plugin` call
         JUCE_VST3_CAN_REPLACE_VST2=0
-)
-
-# download the tsf.h file -> $CMAKE_BINARY_DIR/source/external
-set (TSF_HEADER_URL "https://raw.githubusercontent.com/schellingb/TinySoundFont/main/tsf.h")
-set (TSF_HEADER_PATH "${CMAKE_BINARY_DIR}/source/external/tsf.h")
-
-if (NOT EXISTS ${TSF_HEADER_PATH})
-    message (">> Downloading tsf.h from github")
-    file (DOWNLOAD ${TSF_HEADER_URL} ${TSF_HEADER_PATH})
-endif()
-
-# make $CMAKE_BINARY_DIR/source/external available in project files
-target_include_directories (${Target}
-    PRIVATE
-        "${CMAKE_BINARY_DIR}/source/external"
 )
 
 # create a build number from "several infos"
