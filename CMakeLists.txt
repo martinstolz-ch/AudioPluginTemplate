@@ -131,7 +131,7 @@ target_compile_definitions ("${Target}"
         JUCE_VST3_CAN_REPLACE_VST2=0
 )
 
-# create a build number from "several infos"
+# create a build number from "several infos" (reload the cmake project to update !)
 execute_process (
     COMMAND git rev-list --count HEAD # get git commit number (NOT the commit hash !)
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
