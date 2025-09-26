@@ -4,9 +4,9 @@
 
 #pragma once
 
-namespace pep::config {
+namespace apt::config {
 
- namespace audio {
+namespace audio {
     static constexpr int   numChannelsExpected {2};
     static constexpr float globalGain          {-5.0f};
 }

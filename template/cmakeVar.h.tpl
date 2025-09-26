@@ -9,7 +9,7 @@
 #define BOOLIFY_TRUE  true
 #define BOOLIFY_FALSE false
 
-namespace pep::cmakeVar {
+namespace apt::cmakeVar {
 
 static const String
     projectName  {"@PROJECT_NAME@"},

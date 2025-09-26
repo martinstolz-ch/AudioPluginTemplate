@@ -91,21 +91,21 @@ juce_add_plugin ("${Target}"
 juce_generate_juce_header ("${Target}")
 
 # add binary assets
-message (">> Add binary assets")
-set (BinaryAssets "${Target}-BinaryAssets")
-juce_add_binary_data ("${BinaryAssets}"
+#message (">> Add binary assets")
+#set (BinaryAssets "${Target}-BinaryAssets")
+#juce_add_binary_data ("${BinaryAssets}"
 
-    HEADER_NAME
-    "binaryAssets.h"
+    #HEADER_NAME
+    #"binaryAssets.h"
 
-    NAMESPACE
-    "binaryAssets"
+    #NAMESPACE
+    #"binaryAssets"
 
-    SOURCES
+    #SOURCES
 
     #sounds
     # "asset/sound/..."
-)
+#)
 
 target_sources ("${Target}"
     PRIVATE
@@ -114,7 +114,7 @@ target_sources ("${Target}"
 
 target_link_libraries ("${Target}"
     PRIVATE
-        "${BinaryAssets}"
+        #"${BinaryAssets}"
 
         juce::juce_audio_utils
         juce::juce_audio_processors

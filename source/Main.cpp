@@ -8,5 +8,5 @@
 #include "PluginUI.h"
 
 AudioProcessor* JUCE_CALLTYPE createPluginFilter() {
-    return new pep::PluginProcessor();
+    return new apt::PluginProcessor();
 }

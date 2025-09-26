@@ -8,7 +8,7 @@
 
 #include "PluginProcessor.h"
 
-namespace pep {
+namespace apt {
 
 class PluginUI final
     : public AudioProcessorEditor {
@@ -19,8 +19,6 @@ public:
 
         setSize (400, 300);
         setTitle (cmakeVar::productName);
-
-        };
     }
 
     void paint (Graphics& g) override {
@@ -31,11 +29,10 @@ public:
     }
 
     void resized() override {
-    
     }
 
 private:
-    PluginProcessor& processorRef;
+    [[maybe_unused]] PluginProcessor& processorRef;
 };
 
 inline AudioProcessorEditor* PluginProcessor::createEditor() {

@@ -6,11 +6,11 @@
 
 #include <JuceHeader.h>
 
-#include "binaryAssets.h"
+// #include "binaryAssets.h"
 #include "cmakeVar.h"
 #include "config.h"
 
-namespace pep {
+namespace apt {
 
 class PluginProcessor final
     : public AudioProcessor {
@@ -32,7 +32,7 @@ public:
     }
 
     // DSP stuff
-    void prepareToPlay (const double sampleRate, const int samplesPerBlock) override {
+    void prepareToPlay (const double /* sampleRate */, const int /* samplesPerBlock */) override {
     }
 
     void releaseResources() override {
@@ -42,7 +42,6 @@ public:
     {
         ScopedNoDenormals noDenormals;
 
-        const int totalNumSamples = buffer.getNumSamples();
         buffer.clear();
     }
 
