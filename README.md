@@ -1,2 +1,4 @@
-# pocket e-piano
- Au plugin that receives midi messages und plays the notes with an sf2 sound font
+# audio plugin template
+My basic template for various Juce-based audio plugins.
+
+The code is (imperfect) as it is, use at your own risk. Support of this repo is sporadic due to time constraints.
