@@ -20,10 +20,6 @@ public:
         setSize (400, 300);
         setTitle (cmakeVar::productName);
 
-        addAndMakeVisible (_button);
-        _button.setButtonText ("Note");
-        _button.onClick = [&] {
-
         };
     }
 
@@ -35,12 +31,11 @@ public:
     }
 
     void resized() override {
-        _button.setBounds (10,  10, getWidth() - 20,  30);
+    
     }
 
 private:
     PluginProcessor& processorRef;
-    TextButton _button;
 };
 
 inline AudioProcessorEditor* PluginProcessor::createEditor() {
