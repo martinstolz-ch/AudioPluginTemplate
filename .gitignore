@@ -1,0 +1,7 @@
+# Project exclude paths
+/cmake-build-debug/
+
+# clion project
+/.idea/
+/_etc/
+*.sf2
