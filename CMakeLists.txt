@@ -15,12 +15,12 @@ set     (preRelease "alpha") # alpha, beta, final
 
 set (Target       ${PROJECT_NAME})
 set (ProductName  "audio plugin")
-set (pluginCode   "NP01") # noizplay plugin 01
-set (bundleId     "com.noizplay.${Target}")
+set (pluginCode   "P001")
+set (bundleId     "com.yourdomain.${Target}")
 
-set (companyName      "noizplay")
-set (companyURL       "https://noizplay.com")
-set (manufacturerCode "NZPL")
+set (companyName      "yourCompany")
+set (companyURL       "https://yourdomain.com")
+set (manufacturerCode "YOUR")
 #################################################
 
 # init
