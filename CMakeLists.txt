@@ -10,7 +10,7 @@ set (CMAKE_CXX_STANDARD_REQUIRED ON)
 set (CMAKE_CXX_EXTENSIONS ON) # ON: use "-std=gnu++20" / OFF: use "-std=c++20"
 
 # project config ################################
-project (AudioPlugin VERSION 1.0.0)
+project (AudioPlugin VERSION 0.0.1)
 set     (preRelease "alpha") # alpha, beta, final
 
 set (Target       ${PROJECT_NAME})
